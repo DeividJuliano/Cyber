@@ -1,0 +1,28 @@
+OSINT é um framework de inteligência de fontes abertas e como obter dados sobre alvos.
+https://osintframework.com/   #Site com ramificações de uso
+
+O Google Hacking nada mais é que uma prática para encontraraquivos e/ou falhas a partir do Google, 
+usando ele como uma espécie de scanner, com comandos de buscas avançadas porstrings chamadas 
+de “dorks” ou “operadores de pesquisa”.
+
+“site:” #Busca em um site específico:   site:exemplo.com.br
+“intitle:” #Busca por título de páginas:  intitle:“< Fazer login”
+“inurl:” #Busca de termos presentes na url:  inurl:/wp-admin Dorks
+
+“intext:” #Busca por texto no conteúdo do site:  intext:adminpass
+“filetype:” #Busca por formato de arquivos (.jpg,.zip,.txt):  filetype:.txt
+“inurl:”  #Busca de termos presentes na url:  inurl:/wp-admin
+“-termo”:  #O sinal de “-” exclui um termo da pesquisa
+“2021...2022:”  #Busca entre datas
+
+Há sites como https://www.exploit-db.com/ e InurlBR que possuem Dorks voltadas à exploração de vulnerabilidades em sites.
+
+Shodan  #utilizado para encontrar dispositivos conectados à internet. É possível listar e filtrar 
+dispositivos por localização, tipo de servidor, portas.  https://www.shodan.io/
+"Server: yawcam" "Mime-type: text/html"    #visualizar cameras
+"Server: IP Webcam server" "200 ok"   #vizualizar camera IP
+"220" "230 Login successful." port 21     # vizualizar porta ssh aberta
+
+
+
+ 
