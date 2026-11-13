@@ -23,6 +23,9 @@ dispositivos por localização, tipo de servidor, portas.  https://www.shodan.io
 "Server: IP Webcam server" "200 ok"   #vizualizar camera IP
 "220" "230 Login successful." port 21     # vizualizar porta ssh aberta
 
+Maltego #Ferramenta GUI que permite coletar informações sobre qualquer indivíduo, extraindo 
+as informações que estão publicamente disponíveis na internet por diferentes métodos.
+
 
 
  
