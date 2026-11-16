@@ -1,11 +1,16 @@
 #  nmap ferramenta que auxilia a explorar a rede pode ser instalado ou usada o Kali Linux
 nmap -h    #mostra as opções de uso e paramentros
-namp 10.10.20.122    #informar as portas e serviço deste host  
+nmap -v 192.168.0.0/24  #comando que busca informações dos dispositivos das redes
+nmap -v -sn 192.168.212.50-100  #varre as portas do ip 50 até o 100
+namp -v -sn 192.168.50.100-200 | grep 192 # varre a rede mostrando menos informações
+namp 10.10.20.122    #informar as portas e serviço deste host  p
 nmap -sn 192.168.10.0/24   #verificar os dispositivos ativos na rede (usado em Pentast) quando usamos 
 # um comando com várias funções o rsultado pode ser mais demorado.
 nmap -sn -n 192.168.12/24   #verificar os dispositivos ativos sem resolver DNS
 nmap -sU 192.168.10.100   #verificar o ip usando o protocolo UDP, também necessário para dns
 nmap 192.168.10.100 -V    #verificar informando em tempo real o que está sendo feito
+nmap -v -sn 192.168.212.50-100 | grep 192 > varredura.txt   #varre e salva em arquivo txt de um ls e nano 
+mais o nome do arquivo para vizualizar depois que rodar o comando.
 
 
 
