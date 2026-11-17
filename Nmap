@@ -16,7 +16,10 @@ nmap -v -sU 192.168.15.70-220 -p 21,22,23,8080   #escanea as portas especificada
 
 
 
-#  NMAP SCRIPT ENGINE
+#  NMAP SCRIPT ENGINE 
+#O Nmap Scripting Engine (NSE) é um dos recursos mais poderosos e flexíveis do Nmap, permitindo que os 
+#usuários utilizem scripts para automatizar uma ampla variedade de tarefas de rede.
+
 # Para usar o NMAP SCRIPT ENGINE é necessário entrar na pasta de script do nmap no Kali Linux
 cd /usr/share/nmap/scripts     #acesso a pasta de scripts, nessa pasta há scripts para achar 
 # vulnerabilidades em roteadores de marcas específicas entre outros  
