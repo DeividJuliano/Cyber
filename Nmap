@@ -9,8 +9,10 @@ nmap -sn 192.168.10.0/24   #verificar os dispositivos ativos na rede (usado em P
 nmap -sn -n 192.168.12/24   #verificar os dispositivos ativos sem resolver DNS
 nmap -sU 192.168.10.100   #verificar o ip usando o protocolo UDP, também necessário para dns
 nmap 192.168.10.100 -V    #verificar informando em tempo real o que está sendo feito
-nmap -v -sn 192.168.212.50-100 | grep 192 > varredura.txt   #varre e salva em arquivo txt de um ls e nano 
+nmap -v -sn 192.168.212.50-100 | grep 192 > varredura.txt   #varre e salva em arquivo txt, de um ls e nano 
 mais o nome do arquivo para vizualizar depois que rodar o comando.
+nmap -v -sU 192.168.15.70-220 -p 21-443   #escanea da porta 21 até 443
+nmap -v -sU 192.168.15.70-220 -p 21,22,23,8080   #escanea as portas especificadas 
 
 
 
@@ -25,3 +27,17 @@ nmap --script=nfs-ls 192.168.0.18  # faz a varredura das portas e informa se há
 # de volume e tipos de arquivos (nfs porta 2049, compartilhamento de arquivo) 
 namp --script ftp-vsftpd-backdoor.nse --script-args ftp-vsftpd-backdoor.cmd="ls" 192.168.212.21  #informar
 #as portas abertas, mostra as vulberabilidades e o argumento ls mostra os arquivos na pasta.
+
+
+# Enumeração com nmap
+#A enumeração é um processo que estabelece uma conexão ativa com os hosts de destino para descobrir 
+possíveis vetores de ataque, podendo ser usado para exploração do sistema. Alguns dos comandos abaixo podem 
+ser identificados e barrados pelo Firewall, obtenha permissão para executá-lo.
+
+sudo nmap -v -T5 -sS -Pn --open 192.168.0.1/24   #comando que realiza uma varredura de rede rápida e 
+#silenciosa para identificar portas abertas em todos os dispositivos conectados à rede local
+sudo nmap -O 192.168.0.1  #varre o host e informa o sistena operacional
+sudo nmap -A 192.168.0.106  #varre e informa as versões dos serviços
+sudo nmap -v -sS -sV -T5 -p 22 192.168.0.1   #saber o serviço rodando na porta 22 ssh bem como outras informações
+sudo nmap -v -sS -sV -T5 -p 21-445 192.168.0 106  #saber o serviço rodando entre as portas 21 ate 445
+
