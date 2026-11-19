@@ -1,0 +1,6 @@
+# Ncrack ferramenta de brute force nativa no Kali linux, usada para quebra de autenticação
+# pode ser intregrado com nmap, suporta vários protocolos, muito usados em ambientes distribuido
+# devido a optimização para latência e largura de bandas, pode ser usado no modo stealth,
+# em que o torna menos vísivel para sistema de detecção  (IDS, IPS) o Ncrack ajusta as tentativas 
+# testes de acordo com a resposta da rede. Porém não tão eficiente para paginas web, formulários, tokens
+# e interações complexas
