@@ -1,0 +1,6 @@
+# Hydra ferramenta nativa do Kali Linux, usada para ataques de brute force, explora mais
+# de 50 protocolos diferentes, realiza testes de de serviços como SSH, HTTPS, FTP, HTTP, SMB 
+# entre outros, também testa bancos de dados, permite ataques com múltiplas thread várias 
+# usando várias senhas por meio de uma wordlist. A Hidra não é tão eficiente para quebra de hashes
+# e ataques offline, seu desempenho é melhor em teste on line, serviços e servidores rodando
+# em tempo real.
