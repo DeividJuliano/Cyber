@@ -1,0 +1,2 @@
+# Medusa ferramenta usada para ataque de força bruta que explora protocolos com SSH, UFTP, HTTP, Telnet, SMB entre outros.
+# opera em multi thread. Vêm instalado de forma nativa no Kali linux
