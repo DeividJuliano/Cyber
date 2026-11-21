@@ -1,3 +1,9 @@
 # Medusa ferramenta usada para ataque de força bruta que explora protocolos com SSH, UFTP, HTTP, Telnet, SMB entre outros.
 # opera em multi thread podendo ser usado várias senhas simultaneamente. Vêm instalado de forma nativa no Kali linux
 # não é tão eficaz para aplicação web.
+
+
+# Tentativa de intrusão
+# Crie senhas e usuários
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt  #criar arquivos para  usuários
+echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt  # criar arquivos para  senhas
