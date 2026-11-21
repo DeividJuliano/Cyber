@@ -43,4 +43,9 @@ sudo nmap -O 192.168.0.1  #varre o host e informa o sistena operacional
 sudo nmap -A 192.168.0.106  #varre e informa as versões dos serviços
 sudo nmap -v -sS -sV -T5 -p 22 192.168.0.1   #saber o serviço rodando na porta 22 ssh bem como outras informações
 sudo nmap -v -sS -sV -T5 -p 21-445 192.168.0 106  #saber o serviço rodando entre as portas 21 ate 445
+sudo nmap -sV -p 21,22,80,445,139, 192.168.20.96 # realiza o scan das portas especificadas e as
+# versões dos serviços que estão em operação em caso de open use ftp 192.168.20.96 para
+# se conectar, será necessário descobrir usuário e senha para sair digite quit
+
+
 
